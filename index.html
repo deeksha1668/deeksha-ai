@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deeksha AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f0ff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        h1 {
+            color: #6c4ab6;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #6c4ab6;
+            color: white;
+            font-size: 16px;
+        }
+
+        #answer {
+            margin-top: 25px;
+            padding: 15px;
+            text-align: left;
+            background: #f7f7f7;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>🤖 Deeksha AI</h1>
+
+    <p>Your Personal Study & Skill Assistant</p>
+
+    <textarea id="question"
+        placeholder="Ask me something..."></textarea>
+
+    <br>
+
+    <button onclick="askAI()">Ask Deeksha AI</button>
+
+    <div id="answer">
+        Your answer will appear here.
+    </div>
+
+</div>
+
+<script>
+
+function askAI() {
+
+    let question = document.getElementById("question").value;
+
+    if (question.trim() === "") {
+        document.getElementById("answer").innerText =
+            "Please type a question first 😊";
+        return;
+    }
+
+    document.getElementById("answer").innerText =
+        "I received your question: " + question +
+        "\\n\\n🤖 AI connection will be added in the next step!";
+
+}
+
+</script>
+
+</body>
+</html>
